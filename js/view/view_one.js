@@ -1,5 +1,4 @@
 var postView= Backbone.View.extend({
-	// sedj kj skfjd l k
 	tagName:'tr',
 	className:'single_post',
 	template: _.template($('#list_template').html()),

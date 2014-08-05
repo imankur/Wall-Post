@@ -1,4 +1,4 @@
-var postCollection = Backbone.Collection.extend({
+ var postCollection = Backbone.Collection.extend({
 	model:postModel,
 	url:"api/get_data.php",
 	initialize: function(){
