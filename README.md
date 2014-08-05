@@ -24,7 +24,7 @@ name  |	varchar(20)
 posts |	varchar(50)
 
 ####Workflow :
-After the page gets loaded in the browser, a new Collection(postCollection) object is created. This object retrieve data from database and assign it to cointainer view(wallView) object. This view object render each model using single view(postView). A JavaScript fuction setInterval() is used to refresh the state of collection in every second.
+After the page gets load in the browser, a new Collection(postCollection) object is created. This object retrieve data from database and assign it to cointainer view(wallView) object. This view object render each model using single view(postView). A JavaScript fuction setInterval() is used to refresh the state of collection in every second.
 
 ####Classes:  
 postModel - Model Class  
