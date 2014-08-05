@@ -17,7 +17,7 @@ var postCollection = Backbone.Collection.extend({
     }
 });
 var hh= new postCollection();
-setInterval(function() {
+/*setInterval(function() {
 	hh.fetch();
 	console.log("ankur");
-}, 1000); 
+}, 1000); */

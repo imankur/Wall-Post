@@ -1,5 +1,4 @@
 var postView= Backbone.View.extend({
-	// sedj kj skfjd l k
 	tagName:'tr',
 	className:'single_post',
 	template: _.template($('#list_template').html()),
@@ -12,9 +11,9 @@ var postView= Backbone.View.extend({
 		return this;
 	},
 	del_post:function(){
-		this.model.url=this.model.url+"?id="+this.model.id;
-		console.log(this.model.url);
-		this.model.destroy({
+		//this.model.url=this.model.url+"?id="+this.model.id;
+		//console.log(this.model.url);
+		var vc=this.model.destroy({
 		success:function(mod,res){
 			console.log("sucess",res,mod);
 		},
@@ -22,6 +21,7 @@ var postView= Backbone.View.extend({
 			console.log("failed");
 		}
 		});
+		console.log(vc);
 		this.remove();
 	}
 });
@@ -56,7 +56,7 @@ var wallView= Backbone.View.extend({
 			alert("Please fill details corectly");
 			return false;
 		}
-		tempModel.save({ID:'',name:name1,posts:status1});
+		tempModel.save({id:'',name:name1,posts:status1});
 	}
 	
 });

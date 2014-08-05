@@ -1,5 +1,5 @@
 var postModel = Backbone.Model.extend({
-	url:"api/insert_action.php",
+	urlRoot:"api/insert_action.php",
 	defaults:{
 		id:'',
 		name:'Nil',
