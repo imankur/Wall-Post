@@ -16,16 +16,12 @@ PHP,
 Mysql
 
 Database Schema : 
+Table Name = wall
 
-Table Name = 'wall'
-===================================
-| Column  | 	Type 	     |   Null |
-===================================
-|   ID    | 	int(2)     |  	No 	 | //Primary Key, Auto Increment 
-|  name   | varchar(20) |  	No 	 |
-| posts   | varchar(50) | 	 No   |
-===================================
-
+Column: 
+ID      int(2) //primary key, auto
+name  	varchar(20) 		
+posts 	varchar(50)
 
 
 
