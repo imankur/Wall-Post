@@ -1,4 +1,5 @@
 var postView= Backbone.View.extend({
+	// sedj kj skfjd l k
 	tagName:'tr',
 	className:'single_post',
 	template: _.template($('#list_template').html()),
@@ -7,10 +8,20 @@ var postView= Backbone.View.extend({
 	},
 	render:function(){
 		this.$el.attr("height","100px").html(this.template(this.model.toJSON()));
+		console.log(this.model.get('id'));
 		return this;
 	},
 	del_post:function(){
-		this.model.destroy();
+		this.model.url=this.model.url+"?id="+this.model.id;
+		console.log(this.model.url);
+		this.model.destroy({
+		success:function(mod,res){
+			console.log("sucess",res,mod);
+		},
+		error:function(res){
+			console.log("failed");
+		}
+		});
 		this.remove();
 	}
 });

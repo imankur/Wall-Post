@@ -12,7 +12,8 @@ var postCollection = Backbone.Collection.extend({
 		new  wallView({collection:response});
     },
     fetchError: function (collection, response) {
-        throw new Error("Books fetch error");
+		console.log(response);
+		new  wallView({collection:collection});
     }
 });
 var hh= new postCollection();
