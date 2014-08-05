@@ -1,4 +1,4 @@
-<?php  
+<?php 
 	require '../configs/DB_connection.php';
 	if($_SERVER['REQUEST_METHOD']=='GET'){
 		$sql="SELECT * FROM wall";

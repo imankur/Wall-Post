@@ -1,4 +1,5 @@
 var postView= Backbone.View.extend({
+	// sedj kj skfjd l k
 	tagName:'tr',
 	className:'single_post',
 	template: _.template($('#list_template').html()),
@@ -57,5 +58,6 @@ var wallView= Backbone.View.extend({
 		}
 		tempModel.save({ID:'',name:name1,posts:status1});
 	}
+	
 });
 

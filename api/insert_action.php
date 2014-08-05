@@ -1,4 +1,4 @@
- <?php 
+<?php
 	require '../configs/DB_connection.php';
 	echo $_SERVER['REQUEST_METHOD'];
 	if($_SERVER['REQUEST_METHOD']=='POST'||$_SERVER['REQUEST_METHOD']=='PUT'){

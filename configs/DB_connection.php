@@ -1,4 +1,4 @@
-<?php 
+<?php
 	$link = mysql_connect("localhost","root","");
 	if(!$link){
 		die("No link".mysql_error());
