@@ -19,9 +19,11 @@ Database Schema :
 Table Name = wall
 
 Column:  
-ID      int(2) //primary key, auto  
-name  	varchar(20) 		
-posts 	varchar(50)
+ID    |  int(2) //primary key, auto  
+name  |	varchar(20) 		
+posts |	varchar(50)
+
+
 
 
 
