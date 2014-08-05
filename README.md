@@ -18,13 +18,13 @@ Mysql
 Database Schema : 
 
 Table Name = 'wall'
- ===================================
- | Column  | 	Type 	     |   Null  |
- ===================================
- |   ID    | 	int(2)     |  	No 	 | //Primary Key, Auto Increment 
- |  name   | varchar(20) |  	No 	 |
- | posts   | varchar(50) | 	  No   |
- ===================================
+===================================
+| Column  | 	Type 	     |   Null |
+===================================
+|   ID    | 	int(2)     |  	No 	 | //Primary Key, Auto Increment 
+|  name   | varchar(20) |  	No 	 |
+| posts   | varchar(50) | 	 No   |
+===================================
 
 
 
