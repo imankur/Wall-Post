@@ -6,7 +6,7 @@ Backbone Application
 This is a SPA(Single Page Application) which retrieve records from mysql database and add new record.
 
 Technology Used:
-HTML,
+HTML,  
 CSS,
 Java Script,
 Jquery,
