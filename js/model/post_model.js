@@ -3,7 +3,8 @@ var postModel = Backbone.Model.extend({
 	defaults:{
 		id:'',
 		name:'Nil',
-		posts:'not specified'
+		posts:'not specified',
+		img_url:''
 	},
 });
 var mmodel=new postModel();

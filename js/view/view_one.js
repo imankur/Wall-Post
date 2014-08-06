@@ -11,25 +11,25 @@ var postView= Backbone.View.extend({
 		return this;
 	},
 	del_post:function(){
-		//this.model.url=this.model.url+"?id="+this.model.id;
-		//console.log(this.model.url);
-		var vc=this.model.destroy({
-		success:function(mod,res){
-			console.log("sucess",res,mod);
-		},
-		error:function(res){
-			console.log("failed");
+		var flag=confirm('Are you sure.?');
+		if(flag){
+			var vc=this.model.destroy({
+			success:function(mod,res){
+				console.log("sucess",res,mod);
+			},
+			error:function(res){
+				console.log("failed");
+			}
+			});
+			this.remove();
 		}
-		});
-		console.log(vc);
-		this.remove();
 	}
 });
 
 var wallView= Backbone.View.extend({
 	el:'#container',
 	events:{
-		'click #post_add':'add_post'
+	//	'click #post_add':'add_post'
 	},
 	template: _.template($('#list_template').html()),
 	initialize : function(){
@@ -49,15 +49,18 @@ var wallView= Backbone.View.extend({
 		},this);
 	},
 	add_post:function(){
+		//$("#fileuploader").startUpload();
 		var tempModel=new postModel();
 		var name1=$('#name').val();
 		var status1=$('#status').val();
-		if(name1==""||status1==""){
+		if(status1==""){
 			alert("Please fill details corectly");
 			return false;
 		}
-		tempModel.save({id:'',name:name1,posts:status1});
+		tempModel.save({id:'',name:'',posts:status1});
 	}
 	
 });
+
+
 
