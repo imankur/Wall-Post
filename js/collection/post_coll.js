@@ -10,6 +10,7 @@ var postCollection = Backbone.Collection.extend({
     },
     fetchSuccess: function (response) {
 		new  wallView({collection:response});
+		$('#page_div').css('display','grid');
     },
     fetchError: function (collection, response) {
 		console.log(response);
@@ -20,4 +21,4 @@ var hh= new postCollection();
 setInterval(function() {
 	hh.fetch();
 	console.log("ankur");
-}, 1000); 
+}, 1000);

@@ -1,0 +1,62 @@
+body{
+	font-family:Verdana; margin: 0; background-color: rgba(240, 242, 255, 0.65);
+}
+h2{
+	margin: 0;width: 100%;background-color: #3b5998;padding: 5;color: whitesmoke; text-align: left;font-weight: 100;position: fixed;z-index: 1;top: 0;"
+}
+#container{
+	margin-top: 60;
+}
+form{
+	margin-top: 12;
+}
+lable{
+	color: rgb(77, 77, 77);
+}
+#status{
+	width: 250;border: 1px solid gainsboro;border-radius: 2;height: 24;
+}
+#post_add{
+	padding: 4 14 4 14;margin-left: 10;-moz-border-radius-bottom-right:5px;-moz-border-radius-bottom-left:5px;background-color: rgb(77, 165, 252);color: white; border: dodgerblue;border-radius: 3;
+}
+#page_prev{
+	outline: none;min-height: 150px; font-size: 70;background-color: rgba(240, 242, 255, 0);border: 0;top:0;color: rgb(226, 226, 226);float:left; height: 100%;z-index: 1;position: fixed;left: 0;"
+}
+table{
+text-align: center;border: 1px solid rgba(240, 240, 240, 1);border-radius: 6; margin-top: 20; border-collapse:collapse;width: 618;background: white; padding-bottom:12px;padding-top: 15px;
+}
+#page_next{
+	outline: none;min-height: 150px; font-size: 70;background-color: rgba(240, 242, 255, 0);border: 0;color: darkseagreen;float:right; height: 100%;z-index: 1;position: fixed;right: 0;top: 0%;
+}
+img{
+	margin: 8 0 4 8;border-radius: 70;height:80px;width:80px;
+}
+.like_but{
+	margin-left:20px;margin-top: 4; padding: 2 7 2 7;  background-color: darkseagreen;color: rgb(58, 58, 58);border: 2px solid darkseagreen;border-radius: 3px;
+}
+.edit_but{
+	margin-left:20px; padding: 2 17 2 17;  background-color: darkseagreen;color: rgb(58, 58, 58);border: 2px solid darkseagreen;border-radius: 3px;
+}
+.del_but{
+	margin-left:20px; padding: 2 10 2 10; background-color: rgb(250, 162, 162);color: rgb(58, 58, 58);border: 2px solid rgb(250, 162, 162);border-radius: 3px;
+}
+#edit_status{
+	width:250px;font-size: 15;color: rgb(77, 76, 76);
+}
+.update_but{
+	margin-left:20px; padding: 2 10 2 10;  background-color: darkseagreen;border: 2px solid darkseagreen;border-radius: 3px;
+}
+.del_but{
+	margin-left:20px; padding: 2 10 2 10; background-color: rgb(250, 162, 162);color: rgb(58, 58, 58);border: 2px solid rgb(250, 162, 162);border-radius: 3px;
+}
+.cancel_update_but{
+	margin-left:20px; padding: 2 10 2 10; background-color: rgb(250, 162, 162);border: 2px solid rgb(250, 162, 162);border-radius: 3px;
+}
+td{
+	font-size: 15;color: rgb(77, 76, 76);
+}
+
+
+
+
+

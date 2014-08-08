@@ -1,72 +1,52 @@
 <html>
 	<head>
 		<title>Wall Post</title>
-		<script type="text/javascript">
-			
-		</script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+		<link rel="stylesheet" href="css/wall.css"/>
 	<head>
-	<body style="font-family:sans-serif; margin: 0;">
+	<body>
 		<center>
-			<h2 style="margin: 0;width: 100%;background-color: #3b5998;padding: 5;color: whitesmoke; text-align: left;font-weight: 100;position: fixed;z-index: 1;top: 0;">Wall Post</h2>
-			<div id='container' style="margin-top: 60;">
-				<form style="margin-top: 12;">
-					Status: <input type="text" id="status">
-					<input type="button" value="Post" id="post_add" >
+			<h2>Wall Post</h2>
+			<div id='container'>
+				<form>
+					<lable for="status">Status:</lable><input type="text" id="status">
+					<input type="button" value="Post" id="post_add">
 				</form>
 				<div id="fileuploader">Upload</div>
-				<table border="1px"  style="text-align: center; margin-top: 20; border-collapse:collapse;width: 618;background: #f7f7f7; padding-bottom:12px;padding-top: 15px;">
+				<button id="page_prev" disabled>Prev</button>
+				<table>
 				</table>
+				<button id="page_next">Next</button>
 			</div>
+			<div id="dialog" title="Alert" style="display:none;">
+				<p>
+				Are you sure?</p>
+				</div> 
 			<link href="css/uploadfile.min.css" rel="stylesheet">
 			<script src="js/lib/jquery-1.8.2.min.js"></script>
+			<script src="js/jquery.uploadfile.min.js"></script>
+			<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 			<script src="js/lib/underscore-1.4.2.min.js"></script>
 			<script src="js/lib/backbone.js"></script>
-			<script src="js/jquery.uploadfile.min.js"></script>
 			<script type="text/template" id='list_template'>
+				<td><img src="<%= img_url %>"></img></td>
 				<td width='100px' text-align='center' ><%= name %></td>
-				<td width='320px' text-align='center'><%= posts %></td>
-				<td text-align='center'><img width='120px' height='120px' src="<%= img_url %>"></img></td>
-				<td width='100px'><input type="button" value="Delete" id="del_but"></td>
+				<td width='400px' text-align='center' ><%= posts %></td>
+				<td width='100px'><input type="button" value="<%= like %> - Like" class="like_but">
+									<input type="button" value="Edit" class="edit_but">
+									<input type="button" value="Delete" class="del_but"></td>
+			</script>
+			<script type="text/template" id='edit_template'>
+				<td><img src="<%= img_url %>"></img></td>
+				<td width='80px' text-align='center' ><%= name %></td>
+				<td width="400"><input type="text" value="<%= posts %>" id='edit_status'></td>
+				<td width='100px'><input type="button" value="Update" class="update_but">
+				<input type="button" value="Cancel" class="cancel_update_but"></td>
 			</script>
 			<script src="js/model/post_model.js"></script>
 			<script src="js/collection/post_coll.js"></script>
 			<script src="js/view/view_one.js"></script>
-			<script>
-				$(document).ready(function()
-				{	
-					var uploadObj = $("#fileuploader").uploadFile({
-					url:"api/insert_action.php",
-					autoSubmit:false,
-					fileName:"myfile",
-					maxFileSize:1000000,
-					allowedTypes:"jpg,png,gif",
-					showDone:false,
-					multiple:false,
-					showStatusAfterSuccess:false
-					});
-					
-					$('#post_add').click(function(){
-					
-					if($('#status').val()==''){
-						alert("Plz fill status");
-					
-					}
-					else{
-					var status1={'status':$('#status').val()};
-					
-						uploadObj.update({
-							dynamicFormData:function()
-								{
-									var data ={"statuss":$('#status').val()};
-									return data;        
-								}
-						});
-						uploadObj.startUpload();
-					
-					} });
-					var mmodel=new postModel();
-				});
-			</script>
+			<script src="js/script.js"></script>
 		</center>
 	</body>
 </html>

@@ -4,7 +4,7 @@ var postModel = Backbone.Model.extend({
 		id:'',
 		name:'Nil',
 		posts:'not specified',
-		img_url:''
+		img_url:'',
+		like:0
 	},
 });
-var mmodel=new postModel();
