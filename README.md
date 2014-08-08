@@ -36,7 +36,7 @@ postView - Single Post View
 wallView - Wall View (Container)  
 
 ####PHP Script :  
-insert_action.php - For inserting new post  
+insert_action.php - For inserting new post,updating and deleting.
 get_data.php - For getting data from database inform of JSON object  
 
 
