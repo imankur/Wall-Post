@@ -19,9 +19,12 @@ Mysql
 Table Name = wall
 
 ######Column:  
-ID    |  int(2) //primary key, auto  
+id    |  int(2) //primary key, auto  
 name  |	varchar(20) 		
-posts |	varchar(50)
+posts |	text
+img_url| varchar(50)
+like |int(2)
+
 
 ####Workflow :
 After the page gets load in the browser, a new Collection(postCollection) object is created. This object retrieve data from database and assign it to cointainer view(wallView) object. This view object render each model using single view(postView) object. A JavaScript function setInterval() is used to refresh the state of collection in every second.
